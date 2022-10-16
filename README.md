@@ -1,5 +1,7 @@
 # Pong 2D
 
+Simple Pong game created with Godot engine.
+
 [Play](https://humbrtodias.github.io/godot-2d-pong)
 
 <!--
