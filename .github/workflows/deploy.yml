@@ -5,7 +5,7 @@ on: push
 
 env:
   GODOT_VERSION: 3.5.1
-  EXPORT_NAME: 2g-pong
+  EXPORT_NAME: godot-2d-pong
 
 jobs:
   export-windows:
