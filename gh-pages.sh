@@ -9,6 +9,6 @@ cd build
 git init
 git add -A
 git commit -m 'deploy'
-git push -f https://github.com/humbertodias/ccse-quiz.git `git rev-parse HEAD`:gh-pages
+git push -f `git config --get remote.origin.url` `git rev-parse HEAD`:gh-pages
 
 cd -
