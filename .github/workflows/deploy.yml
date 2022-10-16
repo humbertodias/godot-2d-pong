@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: windows
-          path: build/windows.zip
+          path: ./build/windows.zip
 
   export-linux:
     name: Linux Export
@@ -59,7 +59,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: linux
-          path: build/linux.zip
+          path: ./build/linux.zip
 
   export-web:
     name: Web Export
@@ -84,7 +84,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: web
-          path: build/web.zip
+          path: ./build/web.zip
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
