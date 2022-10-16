@@ -3,6 +3,7 @@
 name: "godot-ci export"
 
 on:
+  push:
   release:
     types: [created]
 
@@ -29,12 +30,12 @@ jobs:
         run: |
           mkdir -v -p build/windows
           godot -v --export "Windows Desktop" build/windows/$EXPORT_NAME.exe
-          zip -r build/windows.zip build/windows/
+          zip -r windows.zip build/windows/
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: windows
-          path: ./build/windows.zip
+          path: windows.zip
 
   export-linux:
     name: Linux Export
@@ -54,12 +55,12 @@ jobs:
         run: |
           mkdir -v -p build/linux
           godot -v --export "Linux/X11" build/linux/$EXPORT_NAME.x86_64
-          tar -zcvf  build/linux.tar.gz build/linux/
+          tar -zcvf linux.tar.gz build/linux/
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: linux
-          path: ./build/linux.zip
+          path: linux.tar.gz
 
   export-web:
     name: Web Export
@@ -79,12 +80,12 @@ jobs:
         run: |
           mkdir -v -p build/web
           godot -v --export "HTML5" build/web/index.html
-          zip -r build/web.zip build/web/
+          zip -r web.zip build/web/
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: web
-          path: ./build/web.zip
+          path: web.zip
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
