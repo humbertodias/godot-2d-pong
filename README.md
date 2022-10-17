@@ -2,7 +2,7 @@
 
 Simple Pong game created with Godot engine.
 
-[Play](https://humbrtodias.github.io/godot-2d-pong)
+[Play](https://humbertodias.github.io/godot-2d-pong/)
 
 <!--
 * [Tutorial](https://www.youtube.com/watch?v=kr1BoEbuveI)
